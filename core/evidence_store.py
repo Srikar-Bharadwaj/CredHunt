@@ -41,4 +41,6 @@ class EvidenceStore:
         return list(self._records)
 
     def save_json(self, path: str):
-        Path(path).write_text(json.dumps(self._records, indent=2))
+        out_path = Path(path)
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        out_path.write_text(json.dumps(self._records, indent=2))
