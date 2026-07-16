@@ -24,7 +24,7 @@ Most "secret scanner" scripts are a regex and a print statement. CredHunt goes a
 - **HTML report generation** via Jinja2 templates, with optional PDF export through `wkhtmltopdf`
 - **Modular scanning core** (`core/scanner.py`) designed to make adding new detection rules straightforward
 - **Network-facing scanning** for HTTP, FTP, SMTP, and SSH services via passive banner/endpoint checks
-- **Concurrent scan dispatch** (worker pool) for scanning multiple targets in parallel *(Benchmarked: 18.2x speedup with 8 workers vs sequential scanning)*
+- **Concurrent scan dispatch** (worker pool) for scanning multiple targets in parallel *(Benchmarked: 7.9x speedup with 8 workers vs sequential scanning)*
 - **Plugin-based architecture** to add new protocol/source scanners without touching core logic
 
 ---
